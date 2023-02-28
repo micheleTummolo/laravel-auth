@@ -12,6 +12,11 @@
                 <a class="btn btn-sm btn-primary" href="{{ route('admin.projects.create') }}" role="button">Aggiungi progetto</a>
             </div>
         </div>
+        @if(session('message'))
+        <div class="alert alert-success">
+            {{session('message')}}
+        </div>
+        @endif
         <div class="col-12 my-5">
             <table class="table table-striped">
                 <thead>
