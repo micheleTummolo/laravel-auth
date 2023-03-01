@@ -39,6 +39,13 @@
                             <a class="btn btn-sm btn-warning" href="{{ route('admin.projects.edit', $project->slug) }}" role="button" title="Modifica il progetto">
                                 <i class="fa-solid fa-edit"></i>
                             </a>
+                            <form action="{{ route('admin.projects.destroy', $project->slug) }}" class="d-inline-block" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-square btn-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
