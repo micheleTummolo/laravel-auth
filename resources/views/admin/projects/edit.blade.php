@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row my-5">
+    <div class="row my-4">
         <div calss="col-12">
             <h2 class="mb-4">Modifica progetto</h2>
         </div>
