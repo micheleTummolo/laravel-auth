@@ -28,4 +28,18 @@ class StoreProjectRequest extends FormRequest
             'description' => ['nullable']
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'Il nome è richiesto',
+            'name.unique' => 'E\' già presente un progetto con questo nome',
+            'name.max' => 'Il nome non può essere lungo più di :max caratteri',
+        ];
+    }
 }
